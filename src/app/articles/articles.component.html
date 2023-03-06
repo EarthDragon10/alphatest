@@ -1,0 +1,27 @@
+<p>articles works!</p>
+
+<table id="articles" border="1">
+  <caption>Alimentari</caption>
+  <thead>
+    <tr>
+      <th>Codice Articolo</th>
+      <th>Descrizione</th>
+      <th>Unitá di Misura</th>
+      <th>Quantitá</th>
+      <th>Peso</th>
+      <th>Prezzo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let article of articles">
+      <td>{{article.codart}}</td>
+      <td>{{article.descrizione}}</td>
+      <td>{{article.um}}</td>
+      <td>{{article.pzcart}}</td>
+      <td>{{article.peso}}</td>
+      <td>{{article.prezzo | currency: "EUR"}}</td>
+      <td>{{article.active}}</td>
+      <td>{{article.data | date: "dd-MM-yyyy"}}</td>
+    </tr>
+  </tbody>
+</table>
