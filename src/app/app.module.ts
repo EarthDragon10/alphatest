@@ -3,13 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { LoginComponent } from './login/login.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ErrorPageComponent } from './error-page/error-page.component';
-import { ArticlesComponent } from './articles/articles.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
 import { CoreModule } from './core/core.module';
+import { LogoutComponent } from './pages/logout/logout.component';
+import { GridArticlesComponent } from './pages/grid-articles/grid-articles.component';
+import { ArticleCardComponent } from './components/article-card/article-card.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { CoreModule } from './core/core.module';
     LoginComponent,
     ErrorPageComponent,
     ArticlesComponent,
+    LogoutComponent,
+    GridArticlesComponent,
+    ArticleCardComponent,
   ],
   imports: [
     BrowserModule,
