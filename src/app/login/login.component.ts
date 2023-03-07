@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthappService } from 'src/services/authapp.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private route: Router) {}
+  constructor(private route: Router, private authService: AuthappService) {}
 
   usernameUser: string = '';
   userId: number = 1;
@@ -27,7 +28,16 @@ export class LoginComponent implements OnInit {
   getsAuth(): void {
     console.log(this.usernameUser);
 
-    if (this.usernameUser == 'Admin' && this.pwdUser == '12345') {
+    // if (this.usernameUser == 'Admin' && this.pwdUser == '12345') {
+    //   this.authenticated = true;
+    //   this.successLogin = true;
+    //   this.route.navigate(['welcome', this.userId]);
+    // } else {
+    //   this.authenticated = false;
+    //   this.successLogin = false;
+    // }
+
+    if (this.authService.isAuth(this.usernameUser, this.pwdUser)) {
       this.authenticated = true;
       this.successLogin = true;
       this.route.navigate(['welcome', this.userId]);
