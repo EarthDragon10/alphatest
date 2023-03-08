@@ -1,2 +1,6 @@
 <app-jumbotron [Titolo]="titolo" [SottoTitolo]="sottoTitolo" [Show]="false"></app-jumbotron>
 <p> Benvenuto {{user}}! Clicca su <a routerLink="/articles">lista prodotti</a></p>
+
+<button class="btn btn-success" (click)="getSaluti()">Saluta</button>
+
+<h2>{{saluti}}</h2>

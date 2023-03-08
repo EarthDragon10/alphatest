@@ -13,6 +13,7 @@ import { CoreModule } from './core/core.module';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { GridArticlesComponent } from './pages/grid-articles/grid-articles.component';
 import { ArticleCardComponent } from './components/article-card/article-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ArticleCardComponent } from './components/article-card/article-card.com
     FormsModule,
     CommonModule,
     CoreModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
